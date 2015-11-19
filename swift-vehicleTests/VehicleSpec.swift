@@ -14,7 +14,7 @@ class VehicleSpec: QuickSpec {
             let rollingSkateboard = Vehicle(name: "skateboard", weight: 7.5, maxSpeed: 20.0)
             let movingBicycle = Vehicle(name: "bicycle", weight: 20.0, maxSpeed: 30.0)
             
-            afterEach {
+            beforeEach {
                 skateboard.speed = 0
                 skateboard.heading = 0
                 bicycle.speed = 0
@@ -42,14 +42,11 @@ class VehicleSpec: QuickSpec {
                     expect(bicycle.maxSpeed).to(equal(30.0))
                 }
                 
-                it("leaves the speed property at 0") {
-                    expect(skateboard.speed).to(equal(0))
-                    expect(bicycle.speed).to(equal(0))
-                }
-                
-                it("leaves the heading property at 0") {
-                    expect(skateboard.heading).to(equal(0))
-                    expect(bicycle.heading).to(equal(0))
+                it("leaves the speed and heading properties at 0") {
+                    let unicycle = Vehicle(name: "unicycle", weight: 10, maxSpeed: 10)
+                    
+                    expect(unicycle.speed).to(equal(0))
+                    expect(unicycle.heading).to(equal(0))
                 }
             }
             
@@ -132,7 +129,7 @@ class VehicleSpec: QuickSpec {
                     movingBicycle.decelerate()
                     
                     let skateSpeed = rollingSkateboard.maxSpeed - rollingSkateboard.maxSpeed*0.1
-                    let bikeSpeed = bicycle.maxSpeed - bicycle.maxSpeed*0.1
+                    let bikeSpeed = movingBicycle.maxSpeed - movingBicycle.maxSpeed*0.1
                     
                     expect(rollingSkateboard.speed).to(equal(skateSpeed))
                     expect(movingBicycle.speed).to(equal(bikeSpeed))
@@ -145,7 +142,7 @@ class VehicleSpec: QuickSpec {
                     movingBicycle.decelerate()
                     
                     let skateSpeed = rollingSkateboard.maxSpeed - rollingSkateboard.maxSpeed*0.2
-                    let bikeSpeed = bicycle.maxSpeed - bicycle.maxSpeed*0.2
+                    let bikeSpeed = movingBicycle.maxSpeed - movingBicycle.maxSpeed*0.2
                     
                     expect(rollingSkateboard.speed).to(equal(skateSpeed))
                     expect(movingBicycle.speed).to(equal(bikeSpeed))

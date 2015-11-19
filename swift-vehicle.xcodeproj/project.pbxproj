@@ -19,6 +19,7 @@
 		4D7E0CBB1BFE2FF500A15C54 /* RaceCar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7E0CBA1BFE2FF500A15C54 /* RaceCar.swift */; };
 		4D7E0CBD1BFE350300A15C54 /* Jet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7E0CBC1BFE350300A15C54 /* Jet.swift */; };
 		4D7E0CBF1BFE4C4400A15C54 /* VehicleSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7E0CBE1BFE4C4400A15C54 /* VehicleSpec.swift */; };
+		4D7E0CC11BFE5C6000A15C54 /* CarSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7E0CC01BFE5C6000A15C54 /* CarSpec.swift */; };
 		D8C1798303A5FD3513635674 /* Pods_swift_vehicleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6098B16ED08140CDACB2A8E6 /* Pods_swift_vehicleTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,7 @@
 		4D7E0CBA1BFE2FF500A15C54 /* RaceCar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RaceCar.swift; sourceTree = "<group>"; };
 		4D7E0CBC1BFE350300A15C54 /* Jet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Jet.swift; sourceTree = "<group>"; };
 		4D7E0CBE1BFE4C4400A15C54 /* VehicleSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleSpec.swift; sourceTree = "<group>"; };
+		4D7E0CC01BFE5C6000A15C54 /* CarSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarSpec.swift; sourceTree = "<group>"; };
 		6098B16ED08140CDACB2A8E6 /* Pods_swift_vehicleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swift_vehicleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE4F61D63F4570597D1E8723 /* Pods-swift-vehicleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift-vehicleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-swift-vehicleTests/Pods-swift-vehicleTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -120,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				4D7E0CBE1BFE4C4400A15C54 /* VehicleSpec.swift */,
+				4D7E0CC01BFE5C6000A15C54 /* CarSpec.swift */,
 				4D7E0CA81BFD340400A15C54 /* swift_vehicleTests.swift */,
 				4D7E0CAA1BFD340400A15C54 /* Info.plist */,
 			);
@@ -314,6 +317,7 @@
 			files = (
 				4D7E0CA91BFD340400A15C54 /* swift_vehicleTests.swift in Sources */,
 				4D7E0CBF1BFE4C4400A15C54 /* VehicleSpec.swift in Sources */,
+				4D7E0CC11BFE5C6000A15C54 /* CarSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

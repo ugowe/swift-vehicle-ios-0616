@@ -26,10 +26,6 @@ class RaceCar: Car {
         }
     }
     
-    func burst() {
-        speed = maxSpeed
-    }
-    
     func driftLeft() {
         if speed > 0 {
             heading = (heading + 270) % 360
