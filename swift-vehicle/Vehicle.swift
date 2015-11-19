@@ -15,6 +15,14 @@ class Vehicle {
         self.maxSpeed = maxSpeed
     }
     
+    func goFast() {
+        speed = maxSpeed
+    }
+    
+    func halt() {
+        speed = 0
+    }
+    
     func accelerate() {
         speed += maxSpeed/10
         if speed > maxSpeed {
@@ -28,19 +36,15 @@ class Vehicle {
             speed = 0
         }
     }
-        
-    func halt() {
-        speed = 0
-    }
     
-    func leftTurn() {
+    func turnLeft() {
         if speed > 0 {
             heading = (heading + 270) % 360
             speed /= 2
         }
     }
     
-    func rightTurn() {
+    func turnRight() {
         if speed > 0 {
             heading = (heading + 90) % 360
             speed /= 2
