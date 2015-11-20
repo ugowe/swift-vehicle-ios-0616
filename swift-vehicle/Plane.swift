@@ -5,6 +5,7 @@ import Foundation
 class Plane: Vehicle {
     let maxAltitude: Double
     var altitude: Double = 0
+    var inFlight: Bool { return speed > 0 && altitude > 0 }
     
     init(name: String, weight: Double, maxSpeed: Double, maxAltitude: Double) {
         self.maxAltitude = maxAltitude
@@ -12,14 +13,19 @@ class Plane: Vehicle {
     }
         
     func takeoff() {
-        if speed == 0 && altitude == 0 {
+        if !inFlight {
             speed = maxSpeed/10
             altitude = maxAltitude/10
         }
     }
     
+    func land() {
+        speed = 0
+        altitude = 0
+    }
+    
     func climb() {
-        if speed > 0 && altitude > 0 {
+        if inFlight {
             altitude += maxAltitude/10
             if altitude > maxAltitude {
                 altitude = maxAltitude
@@ -38,20 +44,15 @@ class Plane: Vehicle {
         }
     }
     
-    func land() {
-        speed = 0
-        altitude = 0
-    }
-    
     func bankLeft() {
-        if speed > 0 && altitude > 0 {
+        if inFlight {
             heading = (heading + 315) % 360
             speed *= 0.9
         }
     }
     
     func bankRight() {
-        if speed > 0 && altitude > 0 {
+        if inFlight {
             heading = (heading + 45) % 360
             speed *= 0.9
         }

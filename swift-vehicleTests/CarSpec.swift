@@ -197,8 +197,10 @@ class CarSpec: QuickSpec {
                     rollingHonda.turnRight()
                     cruisingPorsche.turnRight()
                     
-                    expect(rollingHonda.heading).to(equal(90))
-                    expect(cruisingPorsche.heading).to(equal(90))
+                    expect(rollingHonda.heading).to(beGreaterThanOrEqualTo(0))
+                    expect(rollingHonda.heading).to(beLessThan(360))
+                    expect(cruisingPorsche.heading).to(beGreaterThanOrEqualTo(0))
+                    expect(cruisingPorsche.heading).to(beLessThan(360))
                 }
                 
                 it("does not affect the heading if the speed is 0") {
@@ -236,8 +238,10 @@ class CarSpec: QuickSpec {
                     rollingHonda.turnLeft()
                     cruisingPorsche.turnLeft()
                     
-                    expect(rollingHonda.heading).to(equal(270))
-                    expect(cruisingPorsche.heading).to(equal(270))
+                    expect(rollingHonda.heading).to(beGreaterThanOrEqualTo(0))
+                    expect(rollingHonda.heading).to(beLessThan(360))
+                    expect(cruisingPorsche.heading).to(beGreaterThanOrEqualTo(0))
+                    expect(cruisingPorsche.heading).to(beLessThan(360))
                 }
                 
                 it("decreases the heading by 90 degrees") {

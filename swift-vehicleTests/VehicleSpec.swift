@@ -146,7 +146,6 @@ class VehicleSpec: QuickSpec {
                     
                     expect(rollingSkateboard.speed).to(equal(skateSpeed))
                     expect(movingBicycle.speed).to(equal(bikeSpeed))
-
                 }
                 
                 it("does not decrease the speed below 0") {
@@ -192,8 +191,10 @@ class VehicleSpec: QuickSpec {
                     rollingSkateboard.turnRight()
                     movingBicycle.turnRight()
                     
-                    expect(rollingSkateboard.heading).to(equal(90))
-                    expect(movingBicycle.heading).to(equal(90))
+                    expect(rollingSkateboard.heading).to(beGreaterThanOrEqualTo(0))
+                    expect(rollingSkateboard.heading).to(beLessThan(360))
+                    expect(movingBicycle.heading).to(beGreaterThanOrEqualTo(0))
+                    expect(movingBicycle.heading).to(beLessThan(360))
                 }
                 
                 it("does not affect the heading if the speed is 0") {
@@ -231,8 +232,10 @@ class VehicleSpec: QuickSpec {
                     rollingSkateboard.turnLeft()
                     movingBicycle.turnLeft()
                     
-                    expect(rollingSkateboard.heading).to(equal(270))
-                    expect(movingBicycle.heading).to(equal(270))
+                    expect(rollingSkateboard.heading).to(beGreaterThanOrEqualTo(0))
+                    expect(rollingSkateboard.heading).to(beLessThan(360))
+                    expect(movingBicycle.heading).to(beGreaterThanOrEqualTo(0))
+                    expect(movingBicycle.heading).to(beLessThan(360))
                 }
                 
                 it("decreases the heading by 90 degrees") {

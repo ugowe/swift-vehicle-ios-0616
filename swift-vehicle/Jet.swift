@@ -2,16 +2,12 @@
 
 import Foundation
 
+// 'cuz I'm leavin', on a
 class Jet: Plane {
-    
-    func afterburner() {
-        if speed == maxSpeed && altitude > 0 {
-            speed = maxSpeed * 2
-        }
-    }
+    // don't know when I'll be back again
     
     override func climb() {
-        if speed > 0 && altitude > 0 {
+        if inFlight {
             altitude += maxAltitude/5
             if altitude > maxAltitude {
                 altitude = maxAltitude
@@ -27,6 +23,12 @@ class Jet: Plane {
                 altitude = 0
             }
             self.accelerate()
+        }
+    }
+    
+    func afterburner() {
+        if speed == maxSpeed && inFlight {
+            speed = maxSpeed*2
         }
     }
 }
