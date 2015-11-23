@@ -4,7 +4,7 @@ import Foundation
 
 class RaceCar: Car {
     let driver: String
-    var sponsors = [String]()
+    var sponsors: [String]
     
     init(name: String, weight: Double, maxSpeed: Double, transmission: String, cylinders: Int, milesPerGallon: Double, driver: String, sponsors: [String]) {
         self.driver = driver
@@ -26,16 +26,16 @@ class RaceCar: Car {
         }
     }
     
-    func driftLeft() {
+    func driftRight() {
         if speed > 0 {
-            heading = (heading + 270) % 360
+            heading = (heading + 90) % 360
             speed *= 0.75
         }
     }
     
-    func driftRight() {
+    func driftLeft() {
         if speed > 0 {
-            heading = (heading + 90) % 360
+            heading = (heading + 270) % 360
             speed *= 0.75
         }
     }

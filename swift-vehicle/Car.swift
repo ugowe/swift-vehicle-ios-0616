@@ -5,7 +5,7 @@ import Foundation
 class Car: Vehicle {
     let transmission: String
     let cylinders: Int
-    var milesPerGallon: Double
+    let milesPerGallon: Double
     
     init(name: String, weight: Double, maxSpeed: Double, transmission: String, cylinders: Int, milesPerGallon: Double) {
         self.transmission = transmission

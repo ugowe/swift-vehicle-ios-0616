@@ -37,16 +37,16 @@ class Vehicle {
         }
     }
     
-    func turnLeft() {
+    func turnRight() {
         if speed > 0 {
-            heading = (heading + 270) % 360
+            heading = (heading + 90) % 360
             speed /= 2
         }
     }
     
-    func turnRight() {
+    func turnLeft() {
         if speed > 0 {
-            heading = (heading + 90) % 360
+            heading = (heading + 270) % 360
             speed /= 2
         }
     }

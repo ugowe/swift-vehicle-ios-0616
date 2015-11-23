@@ -195,6 +195,20 @@ class PlaneSpec: QuickSpec {
                     expect(cessna172.altitude).to(equal(0))
                     expect(p51Mustang.altitude).to(equal(0))
                 }
+                
+                it("can be performed by a stalled plane") {
+                    journeyingCessna172.speed = 0
+                    buzzingP51Mustang.speed = 0
+                    
+                    journeyingCessna172.dive()
+                    buzzingP51Mustang.dive()
+                    
+                    expect(journeyingCessna172.speed) ≈ journeyingCessna172.maxSpeed/10
+                    expect(journeyingCessna172.altitude) ≈ journeyingCessna172.maxAltitude*0.4
+                    
+                    expect(buzzingP51Mustang.speed) ≈ buzzingP51Mustang.maxSpeed/10
+                    expect(buzzingP51Mustang.altitude) ≈ buzzingP51Mustang.maxAltitude*0.4
+                }
             }
             
             describe("bankRight") {

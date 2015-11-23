@@ -61,6 +61,14 @@ class RaceCarSpec: QuickSpec {
                 }
             }
             
+            describe("sponsors") {
+                it("should be a mutable array") {
+                    formula1.sponsors.append("Vodafone")
+                    
+                    expect(formula1.sponsors).to(equal(["Mercedes", "Vodafone"]))
+                }
+            }
+            
             // superclass methods
             
             describe("goFast") {
