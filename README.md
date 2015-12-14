@@ -25,7 +25,7 @@ It should have five properties:
 * a mutable `Double` named `heading`.  
 **Top-tip:** *The* `heading` *property is measured in angular degrees,* `0` *to* `360`. *Changes to this property should always keep it within this range.*
 
-Set the variable properties to zero as a default.
+Set the mutable properties to zero as a default.
 
 Write a designated initializer that covers the three immutable properties.
 
