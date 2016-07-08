@@ -1,0 +1,6 @@
+framework module Pods_swift_vehicle {
+  umbrella header "Pods-swift-vehicle-umbrella.h"
+
+  export *
+  module * { export * }
+}

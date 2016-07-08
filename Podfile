@@ -4,8 +4,8 @@
 use_frameworks!
 
 def testing_pods
-  pod 'Quick', '~> 0.8.0'
-  pod 'Nimble', '~> 3.0.0'
+  pod 'Quick', '~> 0.9'
+  pod 'Nimble', '~> 4.1'
 end
 
 target 'swift-vehicle' do
@@ -15,4 +15,3 @@ end
 target 'swift-vehicleTests' do
   testing_pods
 end
-
