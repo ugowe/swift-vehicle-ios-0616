@@ -23,7 +23,8 @@ It should have five properties:
 * an immutable `Double` named `maxSpeed`,
 * a mutable `Double` named `speed`, and
 * a mutable `Double` named `heading`.  
-**Top-tip:** *The* `heading` *property is measured in angular degrees,* `0` *to* `360`. *Changes to this property should always keep it within this range.*
+
+The `heading` property should be measured in degrees, `0` to `360`. Changes to this property should always keep it within this range.
 
 Set the mutable properties to zero as a default.
 
