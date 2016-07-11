@@ -1,17 +1,20 @@
 # Uncomment this line to define a global platform for your project
-# platform :ios, '8.0'
-# Uncomment this line if you're using Swift
-use_frameworks!
+# platform :ios, '9.0'
 
-def testing_pods
-  pod 'Quick', '~> 0.9'
-  pod 'Nimble', '~> 4.1'
-end
+target 'swift-vehicle-lab' do
+  # Comment this line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
 
-target 'swift-vehicle' do
+  # Pods for swift-vehicle-lab
+  def testing_pods
+    pod 'Quick', '~> 0.9'
+    pod 'Nimble', '~> 4.1'
+  end
 
-end
+  target 'swift-vehicle-labTests' do
+    inherit! :search_paths
+    # Pods for testing
+    testing_pods
+  end
 
-target 'swift-vehicleTests' do
-  testing_pods
 end
